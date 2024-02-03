@@ -5,9 +5,13 @@ Welcome to the Interview Quiz App, a React-based web application designed to hel
 
 Features:
 116 Interview MCQs: Explore a curated set of multiple-choice questions covering various topics commonly featured in technical interviews.
+
 Code Challenges: Sharpen your programming skills with coding questions, complete with syntax highlighting.
+
 Real-time Timer: Feel the pressure with a countdown timer for each question.
+
 Result Summary: Get instant feedback with a summary of your quiz performance.
+
 Responsive Design: Enjoy a seamless experience on desktops, tablets, and mobile devices.
 
 Technologies Used:
