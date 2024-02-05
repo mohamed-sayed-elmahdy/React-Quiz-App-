@@ -20,11 +20,13 @@ function Quiz({ questions }) {
   const [wrongAnswar, setWrongAnswar] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [key, setKey] = useState(Date.now()); // Add key state
+  const [right, setRight] = useState(null); // Add key state
 
 
 
 
   const nextQuestion = () => {
+    setRight(null);
     setDisable(null);
     setGreen(null);
     setAnswerIdx(null);
@@ -40,6 +42,8 @@ function Quiz({ questions }) {
   };
 
   const checkAnswar = (answar, index) => {
+    setRight("right")
+
     setAnswerIdx(index);
     setDisable("disable");
     if (answar === correctAnswer) {
@@ -84,7 +88,7 @@ function Quiz({ questions }) {
           <ul className="answars-container">
             {choices.map((choice, index) => (
               <li
-                className={`"answar" ${answerIdx === index ? green : disable}`}
+                className={`"answar" ${answerIdx === index ? green : disable} ${choice === correctAnswer ? right : null}`}
                 key={choice}
                 onClick={() => checkAnswar(choice, index)}
               >
